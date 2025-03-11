@@ -26,8 +26,8 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <h1>OpenAI Integration with Next.js</h1>
+    <div className="flex justify-center items-center h-screen">
+      {/* <h1>OpenAI Integration with Next.js</h1>
       <form onSubmit={handleSubmit}>
         <textarea
           value={prompt}
@@ -36,7 +36,21 @@ export default function Home() {
         />
         <button type="submit">Generate</button>
       </form>
-      {response && <div><h2>Response:</h2><p>{response}</p></div>}
+      {response && <div><h2>Response:</h2><p>{response}</p></div>} */}
+      <div className="p-8">
+        <p>This is deepseek clone - Chatbot</p>
+        <p>how can i help you?</p>
+        <div className="w-full">
+          <form onSubmit={handleSubmit}>
+            <textarea
+              value={prompt}
+              onChange={(e) => setPrompt(e.target.value)}
+              placeholder="Enter your prompt here..."
+            />
+            <button type="submit">Generate</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
